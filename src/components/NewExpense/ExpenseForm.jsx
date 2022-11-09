@@ -5,45 +5,31 @@ const ExpenseForm = () => {
     const [enteredTitle, setEnteredTitle] = useState('');
     const [enteredAmount, setEnteredAmount] = useState('');
     const [enteredDate, setEnteredDate] = useState('');
-    // const [userInput, setUserInput] = useState({
-    //     enteredTitle: '',
-    //     enteredAmount: '',
-    //     enteredDate: ''
-    // });
 
     const titleChangeHandler = event => {
         setEnteredTitle(event.target.value);
-        // setUserInput({
-        //     enteredTitle: event.target.value,
-        //     ...userInput
-        // });
-        // setUserInput((prevState) => {
-        //     return {...prevState, enteredTitle: event.target.value}
-        // });
     }
+
     const amountChangeHandler = event => {
         setEnteredAmount(event.target.value);
-        // setUserInput({
-        //     enteredAmount: event.target.value,
-        //     ...userInput
-        // });
-        // setUserInput((prevState) => {
-        //     return {...prevState, enteredAmount: event.target.value}
-        // });
     }
+
     const dateChangeHandler = event => {
         setEnteredDate(event.target.value);
-        // setUserInput({
-        //     enteredDate: event.target.value,
-        //     ...userInput
-        // });
-        // setUserInput((prevState) => {
-        //     return {...prevState, enteredDate: event.target.value}
-        // });
+    }
+
+    const sumbitHandler = event => {
+        event.preventDefault();
+        const expenseData =  {
+            title: enteredTitle,
+            amount: enteredAmount,
+            date: new Date(enteredDate)
+        }
+        console.log(expenseData)
     }
 
     return(
-        <form action="">
+        <form action="" onSubmit={sumbitHandler}>
             <div className='new-expense__controls'>
                 <div className='new-expense__control'>
                     <label htmlFor="">Title</label>
