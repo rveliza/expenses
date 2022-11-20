@@ -27,7 +27,7 @@ const DUMMY_EXPENSES = [
     id: 'e5',
     title: 'Marrecife',
     amount: 130,
-    date: new Date(2022, 11, 11),
+    date: new Date(2025, 11, 11),
   },
 ];
 
