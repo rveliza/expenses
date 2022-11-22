@@ -1,3 +1,5 @@
+import Chart from "../Chart/Chart";
+
 const ExpensesChart = props => {
     // console.log(props.expenses)
     const chartDataPoints = [
@@ -22,7 +24,7 @@ const ExpensesChart = props => {
     //   console.log(chartDataPoints);
 
     return (
-        <h1>Hello</h1>
+        <Chart dataPoints = {chartDataPoints} />
     );
 }
 
